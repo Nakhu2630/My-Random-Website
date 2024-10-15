@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Website</title>
+
+    <link rel="stylesheet" href="style.css"/>
+
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet"/>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <header>
+        <a href="#" class="logo">Ano's Fav Animes</a>
+
+        <ul class="navlist">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="list.html">List</a></li>
+            <li><a href="personal.html">Personal</a></li>
+        </ul>
+
+        <div class="bx bx-menu" id="menu-icon"></div>
+    </header>
+
+    <section class="anime">
+        <div class="anime-name1">
+            <h5>Jun Maeda's Work</h5>
+            <h4>A Supernatural Anime</h4>
+            <h1>CHARLOTTE</h1>
+            <p>In an alternate world, a small percentage of children are able to manifest superpowers upon reaching puberty. Yuu Otosaka, a boy who awakens the ability to temporarily possess others, hopes to use his power to live an easy going high school life.</p>
+            <a href="https://myanimelist.net/anime/28999/Charlotte">More</a>
+            <a href="#" class="ctaa"><i class="ri-play-circle-line"></i>Watch Trailer</a>
+        </div>
+
+        <div class="anime-img">
+            <img src="charlotte.png" alt="Charlotte Anime">
+        </div>
+    </section>
+
+    <!-- Container untuk YouTube Player -->
+    <div id="youtube-player-container" style="display: none;">
+        <iframe id="youtube-player" width="560" height="315" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+
+    <div class="icons">
+        <a href="discord.html"><i class="ri-discord-line"></i></a>
+        <a href="https://www.youtube.com/@Nakhu_Dude"><i class="ri-youtube-line"></i></a>
+    </div>
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="js/script.js"></script>
+
+    <!-- Script tambahan untuk YouTube Player -->
+    <script>
+        // YouTube Player - Tampilkan setelah klik tombol "Watch Trailer"
+        const button = document.querySelector('.ctaa');
+        const playerContainer = document.getElementById('youtube-player-container');
+        const youtubePlayer = document.getElementById('youtube-player');
+
+        // URL dari video YouTube yang akan diputar
+        const videoUrl = "https://www.youtube.com/embed/hle1wSBedkk?autoplay=1"; // ID video dari URL yang diberikan
+
+        // Event handler untuk tombol Watch Trailer
+        button.addEventListener('click', function(event) {
+            event.preventDefault(); // Mencegah aksi default tombol
+            playerContainer.style.display = 'block'; // Tampilkan player YouTube
+            youtubePlayer.src = videoUrl; // Set URL video YouTube ke iframe
+        });
+    </script>
+
+</body>
+</html>

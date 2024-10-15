@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>"Website"</title>
+
+    <link rel="stylesheet" a href="style.css"/>
+
+    <link rel="stylesheet"
+    href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+    rel="stylesheet"/>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+
+    <style>
+        .summary-container {
+            margin-top: 40px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: none; /* Initially hidden */
+        }
+        .summary-container h2 {
+            color: #B24C50;
+            text-align: center;
+        }
+        .summary-container p {
+            margin: 10px 0;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    
+    <header>
+        <a href="#" class="logo">Ano's Fav Animes</a>
+
+        <ul class="navlist">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="list.html">List</a></li>
+            <li><a href="personal.html">Personal</a></li>
+        </ul>
+
+        <div class="bx bx-menu" id="menu-icon"></div>
+
+    </header>
+
+    <section class="anime">
+        <div class="anime-name1">
+            <h5>Jun Maeda's Work</h5>
+            <h4>A Supernatural Anime</h4>
+            <h1>CHARLOTTE</h1>
+            <p>It might be a "romance" anime, but who knows??</p>
+            <a href="#" id="summary-btn">Summary</a> <!-- Changed href to # -->
+        </div>
+
+        <div class="anime-img">
+            <img src="charlotte.png" alt="Charlotte Anime">
+        </div>
+    </section>
+
+    <div class="summary-container" id="summary-container"> <!-- Added id for targeting -->
+        <h2>Anime Summary</h2>
+        <p><strong>Genre:</strong> Supernatural, Action, Drama</p>
+        <p><strong>Created by:</strong> Jun Maeda</p>
+        <p><strong>Studio:</strong> P.A. Works, Aniplex</p>
+        <p><strong>Episodes:</strong> 13</p>
+        <p><strong>Release Date:</strong> July 4, 2015 - September 27, 2015</p>
+        <p><strong>Synopsis:</strong> In a world where a small percentage of teenagers develop supernatural abilities, Yuu Otosaka has the power to temporarily possess others. However, he must confront the consequences of his actions and learn to use his powers for good while attending Hoshinoumi Academy, a school for gifted teens.</p>
+    </div>
+
+    <div class="icons">
+        <a href="discord.html"><i class="ri-discord-line"></i></a>
+        <a href="https://www.youtube.com/@Nakhu_Dude"><i class="ri-youtube-line"></i></a>
+    </div>
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="js/script.js"></script>
+
+    <script>
+        // JavaScript to toggle summary visibility and auto-scroll
+        const summaryButton = document.getElementById('summary-btn');
+        const summaryContainer = document.getElementById('summary-container');
+
+        summaryButton.addEventListener('click', function(event) {
+            event.preventDefault(); // Prevent the default link behavior
+            
+            // Toggle visibility
+            if (summaryContainer.style.display === 'none' || summaryContainer.style.display === '') {
+                summaryContainer.style.display = 'block'; // Show summary
+                summaryContainer.scrollIntoView({ behavior: 'smooth' }); // Smooth scroll to summary
+            } else {
+                summaryContainer.style.display = 'none'; // Hide summary
+            }
+        });
+    </script>
+
+</body>
+</html>
